@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+    font-family: customFont;
+}
+
+body {
+    color: #fff;
+    background-image: url("../assets/img/background.jpg");
+    background-size: 100%;
+}
+
+.start-page .buttons{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10vw;
+    margin-top: -5px;
+}
+
+.start-page .buttons a{
+    font-size: 2vw;
+    text-decoration: none;
+    padding: 10px 0;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px 3px #a350af;
+    cursor: pointer;
+}
+
+.start-page .buttons a span {
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 0 15px 3px #a350af inset;
+    padding: 10px 30px;
+}
+
+.eye {
+    position: relative;
+    width: 65vw;
+}
+
+.title {
+    position: absolute;
+    top: 22vw;
+    right: 10vw;
+    width: 45vw;
+}
