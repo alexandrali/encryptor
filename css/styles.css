@@ -24,14 +24,14 @@ body {
     padding: 10px 0;
     border: 1px solid #fff;
     border-radius: 8px;
-    box-shadow: 0 0 15px 3px #a350af;
+    box-shadow: 0 0 15px 5px #a350af;
     cursor: pointer;
 }
 
 .start-page .buttons a span {
     box-sizing: border-box;
     border-radius: 8px;
-    box-shadow: 0 0 15px 3px #a350af inset;
+    box-shadow: 0 0 15px 5px #a350af inset;
     padding: 10px 30px;
 }
 
@@ -49,7 +49,7 @@ body {
 
 /********************/
 
-.check-pass {
+.check-pass, .create-pass {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,7 +70,7 @@ body {
     padding: 10px 0;
     border: 1px solid #fff;
     border-radius: 8px;
-    box-shadow: 0 0 15px 3px #a350af;
+    box-shadow: 0 0 15px 5px #a350af;
     margin-bottom: 10vh;
     margin-top: 20vh;
 }
@@ -78,7 +78,7 @@ body {
 .check h1 span {
     box-sizing: border-box;
     border-radius: 8px;
-    box-shadow: 0 0 15px 3px #a350af inset;
+    box-shadow: 0 0 15px 5px #a350af inset;
     padding: 10px 30vw 10px 2vw;
 }
 
@@ -92,7 +92,7 @@ body {
     padding: 15px 0;
     border: 1px solid #fff;
     border-radius: 8px;
-    box-shadow: 0 0 15px 3px #a350af;
+    box-shadow: 0 0 15px 5px #a350af;
     margin-bottom: 10vh;
     cursor: pointer;
 }
@@ -100,19 +100,71 @@ body {
 .check a span {
     box-sizing: border-box;
     border-radius: 8px;
-    box-shadow: 0 0 15px 3px #a350af inset;
+    box-shadow: 0 0 15px 5px #a350af inset;
     padding: 15px 2vw;
 }
 
 .check a:first-child{
     color: #29DA94;
-    box-shadow: 0 0 15px 3px #29DA94;
+    box-shadow: 0 0 15px 5px #29DA94;
 }
 
 .check a:first-child span {
-    box-shadow: 0 0 15px 3px #29DA94 inset;
+    box-shadow: 0 0 15px 5px #29DA94 inset;
 }
 
 .check a:last-child{
     color: #EF96E4;
+}
+
+/****************/
+
+.create {
+    display: flex;
+    flex-direction: column;
+}
+.custom-pass {
+    color: #fff;
+    font-size: 2vw;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px 5px #a350af inset;
+    background: transparent;
+    padding: 15px 2vw;
+    width: 50vw;
+}
+
+.pass-input {
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 0 15px 5px #a350af;
+}
+
+.green {
+    margin-top: 5vw;
+    position: relative;
+    height: 20px;
+    background: #29B473;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 3px #fff;
+    width: 70vw;
+    margin-bottom: 2vw;
+}
+
+.red {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20px;
+    border-radius: 10px;
+    background: #EC297B;
+    width: 40vw;
+}
+
+.scale {
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
 }
