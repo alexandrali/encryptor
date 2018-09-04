@@ -85,6 +85,10 @@ body {
     cursor: pointer;
 }
 
+.check span,  .presentation span, .buttons span{
+    position: relative;
+}
+
 .check h1 span {
     display: inline-block;
     box-sizing: border-box;
@@ -161,6 +165,30 @@ body {
     margin: 0 auto;
     border-radius: 8px;
     box-shadow: 0 0 15px 5px #a350af;
+    position: relative;
+}
+
+.pass-input div {
+    position: absolute;
+    background: #fff;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    opacity: 0.4;
+    filter: blur(25px);
+    transform: scale(1, 0.2);
+}
+
+.pass-input div:first-child {
+    top: -50px;
+}
+
+.pass-input div:last-child {
+    bottom: -50px;
 }
 
 .green {
@@ -192,4 +220,41 @@ body {
 
 .scale span {
     font-size: 1.5vw;
+}
+
+
+/*******/
+
+.check span::before,  .check span::after, 
+.presentation span::before, .presentation span::after, 
+.buttons span::before, .buttons span::after{
+    content: "";
+    position: absolute;
+    background: #fff;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    opacity: 0.4;
+    filter: blur(25px);
+    transform: scale(1, 0.2);
+}
+
+.check span::before, .presentation span::before, .buttons span::before  {
+    top: -50px;
+}
+
+.check span::after, .presentation span::after, .buttons span::after {
+    bottom: -50px;
+}
+
+.buttons span::before {
+    left: 40%;
+}
+
+.buttons span::before, .buttons span::after {
+    width: 50px;
 }

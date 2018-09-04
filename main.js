@@ -46,7 +46,9 @@ create.innerHTML =
     `<div class="back"><img class="rocket" src="./assets/img/rocket.png" onclick="back('create')" /></div>
     <div class="create">
     <div class="pass-input">
-        <input type="text" class="custom-pass" id="custom-pass" placeholder="ПАРОЛЬ.." onkeypress="customValidation()"/>
+        <div></div>
+        <input type="text" class="custom-pass" id="custom-pass" placeholder="ПАРОЛЬ.." oninput="customValidation()"/>
+        <div></div>
     </div>
     
     <div class="green">
@@ -142,9 +144,14 @@ function customValidation() {
     var value = document.getElementById('custom-pass').value;
 
     var number = /\d/.test(value);
-    var upperCase = /[A-Z]/.test(value);
+    var upperCase = /[A-ZА-Я]/.test(value);
     var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
     var spec = format.test(value);
+
+    if ( !value.length ){
+        document.getElementsByClassName('red')[0].style.setProperty('width', '100%', '');
+        return;
+    }
 
     if (number && upperCase && spec && value.length > 7) {
         percent = 100;
@@ -170,7 +177,7 @@ function customValidation() {
         return;
     }
 
-    if (!number && !upperCase && !spec) {
+    if (!number && !upperCase && !spec && value.length < 7) {
         percent = 10;
         document.getElementsByClassName('red')[0].style.setProperty('width', '90%', '');
         return;
