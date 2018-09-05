@@ -21,25 +21,25 @@ start.innerHTML =
         <img class="title" src="./assets/img/title.png" />
       </div>
       <div class="buttons">
-        <a onclick="checkPass()"><span>ПРОВЕРЬТЕ ПАРОЛЬ</span></a>
-        <a onclick="openPresentation()"><span>ПРЕЗЕНТАЦИЯ</span></a>
-        <a onclick="createPass()"><span>СОЗДАЙТЕ ПАРОЛЬ</span></a>
+        <a onmousedown="checkPass()"><span>ПРОВЕРЬТЕ ПАРОЛЬ</span></a>
+        <a onmousedown="openPresentation()"><span>ПРЕЗЕНТАЦИЯ</span></a>
+        <a onmousedown="createPass()"><span>СОЗДАЙТЕ ПАРОЛЬ</span></a>
       </div>`;
 
 check.innerHTML =
       `<div class="back"><img class="rocket" src="./assets/img/rocket.png" onclick="back('check')"/></div>
       <div class="check">
-        <h1 onclick="updateCheckValue()"><span id="checkValue"></span></h1>
+        <h1 onmousedown="updateCheckValue()"><span id="checkValue"></span></h1>
         <div>
-          <a id="valid" onclick="passwordValidation()"><span>НАДЕЖНЫЙ ПАРОЛЬ</span></a>
-          <a id="invalid" onclick="passwordValidation()"><span>НЕНАДЕЖНЫЙ ПАРОЛЬ</span></a>
+          <a id="valid" onmousedown="passwordValidation()"><span>НАДЕЖНЫЙ ПАРОЛЬ</span></a>
+          <a id="invalid" onmousedown="passwordValidation()"><span>НЕНАДЕЖНЫЙ ПАРОЛЬ</span></a>
         </div>
       </div>`;
 
 presentation.innerHTML =
       `<div class="back"><img class="rocket" src="./assets/img/rocket.png" onclick="back('presentation')"/></div>
       <div class="presentation">
-        <h1 onclick="updateExample()"><span id="passExample"></span></h1>
+        <h1 onmousedown="updateExample()"><span id="passExample"></span></h1>
       </div>`;
 
 create.innerHTML = 
@@ -75,8 +75,8 @@ function checkPass() {
     app.removeChild(start);
     app.appendChild(check);
 
-    document.getElementById('valid').style.setProperty('box-shadow', '0 0 15px 5px #29DA94', '');
-    document.getElementById('invalid').style.setProperty('box-shadow', '0 0 15px 5px #a350af', '');
+    document.getElementById('valid').style.setProperty('box-shadow', 'none', '');
+    document.getElementById('invalid').style.setProperty('box-shadow', 'none', '');
     
     checkValueIndex = 0;
     document.getElementById('checkValue').innerHTML = checkValues[0].value;
@@ -127,8 +127,8 @@ function updateCheckValue() {
     document.getElementById('checkValue').innerHTML = checkValues[checkValueIndex].value;
     checkValue = checkValues[checkValueIndex];
 
-    document.getElementById('valid').style.setProperty('box-shadow', '0 0 15px 5px #29DA94', '');
-    document.getElementById('invalid').style.setProperty('box-shadow', '0 0 15px 5px #a350af', '');
+    document.getElementById('valid').style.setProperty('box-shadow', 'none', '');
+    document.getElementById('invalid').style.setProperty('box-shadow', 'none', '');
 }
 
 function passwordValidation () {
@@ -136,7 +136,7 @@ function passwordValidation () {
     if (valid) {
         document.getElementById('valid').style.setProperty('box-shadow', '0 0 30px 20px #29DA94', '');
     } else {
-        document.getElementById('invalid').style.setProperty('box-shadow', '0 0 30px 20px #a350af', '');
+        document.getElementById('invalid').style.setProperty('box-shadow', '0 0 35px 25px #a350af', '');
     }
 }
 

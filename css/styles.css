@@ -3,6 +3,13 @@
     padding: 0;
     
     font-family: customFont;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
 }
 
 body {
@@ -115,9 +122,8 @@ body {
 .check a{
     font-size: 2.5vw;
     padding: 15px 0;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     border-radius: 8px;
-    box-shadow: 0 0 15px 5px #a350af;
     margin-bottom: 10vh;
     cursor: pointer;
 }
@@ -125,17 +131,11 @@ body {
 .check a span {
     box-sizing: border-box;
     border-radius: 8px;
-    box-shadow: 0 0 15px 5px #a350af inset;
     padding: 15px 2vw;
 }
 
 .check a:first-child{
     color: #29DA94;
-    box-shadow: 0 0 15px 5px #29DA94;
-}
-
-.check a:first-child span {
-    box-shadow: 0 0 15px 5px #29DA94 inset;
 }
 
 .check a:last-child{
